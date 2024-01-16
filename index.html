@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>오설록</title>
-  </head>
+    
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -27,7 +26,18 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <!-- 제이쿼리 적용 -->
+    <!-- 스와퍼적용 -->
+    <!-- css -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <!-- js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+    <title>오설록</title>
   <body>
+    
     <div class="wrap">
       <!-- header -->
       <header>
@@ -93,16 +103,31 @@
       <!-- main -->
       <div class="main">
         <div class="slider">
-          <!-- <img src="images/slider.png" alt="메인이미지" /> -->
-          <img src="images/slider02.png" alt="메인이미지2" />
-          <div class="title">
-            <h1>차와 제주가 선사하는 가치 있는 쉼</h1>
-            <h3>제주에서 온 차 한잔의 쉼<br />| 오설록</h3>
+           <!-- Swiper -->
+           <div class="swiper oserlok">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="title">
+                  <img src="images/slider02.png" alt="메인이미지2" />
+                  <h1>차와 제주가 선사하는 가치 있는 쉼<br>
+                  제주에서 온 차 한잔의 쉼<br />| 오설록</h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="title">
+                  <img src="images/slider.png" alt="메인이미지2" />
+                  <h1>차와 제주가 선사하는 가치 있는 쉼<br>
+                  제주에서 온 차 한잔의 쉼<br />| 오설록</h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="title">
+                  <img src="images/slider02.png" alt="메인이미지2" />
+                  <h1>차와 제주가 선사하는 가치 있는 쉼<br>
+                  제주에서 온 차 한잔의 쉼<br />| 오설록</h1>
+                </div>
+              </div>
           </div>
-          <!-- <span class="left"><i class="fa-solid fa-chevron-left"></i></span>
-          <span class="right"><i class="fa-solid fa-chevron-right"></i></span> -->
-        </div>
-      </div>
       <!-- content -->
       <div class="content">
         <button>BEST</button>
@@ -179,5 +204,23 @@
         </div>
       </footer>
     </div>
+    <script>
+      var swiper = new Swiper(".oserlok", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
