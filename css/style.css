@@ -169,7 +169,6 @@ main {
 .content-item {
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 30%;
 }
 .content-item ul li {
   float: left;
@@ -184,10 +183,11 @@ main {
 }
 .content-item ul li h3 {
   font-weight: bold;
+  font-size: 25px;
 }
 .content-item ul li p {
   margin-top: 30px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 20px;
 }
 /* footer */
@@ -234,6 +234,15 @@ footer {
   color: #ffffff;
 }
 
+/* 슬라이드 버튼 */
+
+.serlok .swiper-button-next {
+  color: #324b33;
+}
+.serlok .swiper-button-prev {
+  color: #324b33;
+}
+
 /* 반응형 */
 @media all and (max-width: 768px) {
   input {
@@ -252,42 +261,42 @@ footer {
   .mainmenu {
     font-size: 13px;
   }
-  h1 {
-    font-size: 20px;
-  }
-  h3 {
+  .title h1 {
     font-size: 15px;
+    line-height: 30px;
   }
-
   span {
     display: none;
   }
-  .content-item li:nth-child(1) {
-    padding: 50px;
-    width: 100%;
-  }
   .content {
+    padding: 40px;
   }
-  .content li {
+  .content-item {
+    padding-top: 50px;
+    padding-bottom: 0;
   }
-  .content-item li:nth-child(2) {
-    display: none;
+  .content-item h3 {
+    font-size: 20px;
   }
-  .content-item li:nth-child(3) {
-    display: none;
+  .content-item p {
+    word-break: break-all;
   }
-  .content-item li:nth-child(4) {
-    display: none;
-  }
-  .btn img {
+  .content-item img {
+    display: flex;
+    align-items: center;
   }
   .btn p {
-    font-size: small;
+    font-size: 9.6px;
+    overflow: hidden;
+    word-break: break-all;
   }
-
+  .btn span {
+    display: none;
+  }
   .copyright {
     font-size: 15px;
     text-align: center;
     line-height: 30px;
+    text-align: center;
   }
 }
